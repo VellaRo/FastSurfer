@@ -133,7 +133,32 @@ python3 generate_hdf5.py \
 
 #### Example Command Sagittal using --data_dir instead of --csv_file
 --data_dir specifies the path in which the data is located, with --pattern we can select subjects from the specified path. By default the pattern is "*" meaning all subjects will be selected.
-In the following example we are selecting subject10 till subject19
+As an example, imagine you have 19 FreeSurfer processed subjects labeled subject1 to subject19 in the ../data directory:
+
+```
+/home/user/FastSurfer/data
+├── subject1
+├── subject2
+├── subject3
+…
+│
+├── subject19
+    ├── mri
+    │   ├── aparc.DKTatlas+aseg.mgz
+    │   ├── aseg.auto_noCCseg.mgz
+    │   ├── orig.mgz
+    │   ├── …
+    │   …
+    ├── scripts
+    ├── stats
+    ├── surf
+    ├── tmp
+    ├── touch
+    └── trash
+```
+
+Setting --pattern "*" will select all 19 subjects (subject1, ..., subject19).
+Now, if only a subset should be used for the hdf5-file (e.g. subject 10 till subject19), this can be done by changing the --pattern flag to "subject1[0-9]": 
 
 ```
 python3 generate_hdf5.py \
