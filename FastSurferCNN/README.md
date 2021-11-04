@@ -131,6 +131,22 @@ python3 generate_hdf5.py \
 
 ```
 
+#### Example Command Sagittal using --data_dir instead of --csv_file
+--data_dir specifies the path in which the data is located, with --pattern we can select subjects from the specified path. By default the pattern is "*" meaning all subjects will be selected.
+In the following example we are selecting subject10 till subject19
+
+```
+python3 generate_hdf5.py \
+--hdf5_name ../data/training_set_cispa_axial.hdf5 \
+--data_dir ../data \
+--pattern "subject1[0-9]" 
+--plane sagittal \
+--image_name mri/orig.mgz \
+--gt_name mri/aparc.DKTatlas+aseg.mgz \
+--gt_nocc mri/aseg.auto_noCCseg.mgz
+ 
+```
+
 # 3. Training
 
 The *FastSurferCNN* directory contains all the source code and modules needed to run the scripts. A list of python libraries used within the code can be found in __requirements.txt__. The main script is called __train.py__ within which certain options can be selected and set via the command line:
