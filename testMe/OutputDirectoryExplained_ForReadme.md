@@ -68,17 +68,21 @@ Here are computed and provided some Statistics:
 - aseg.stats (Final aseg stats)
     	...
 __(Other)__:
-    __surf__ ?
-    __tmp__ ?
-    __touch__ ?textfiles with commands which are runed at runtime ? 
-    __trash__ ?
-    __label__ ?
+- surf 
+- tmp
+- touch ?textfiles with commands which are runed at runtime ? 
+- trash
+- label
 
 	
-#### FreeSurfer:
+### FreeSurfer Overview:
 
-FreeSurfer is a set of software tools for the study of cortical and subcortical anatomy. In the cortical surface stream, the tools construct models of the boundary between white matter and cortical gray matter as well as the pial surface. Once these surfaces are known, an array of anatomical measures becomes possible, including: cortical thickness, surface area, curvature, and surface normal at each point on the cortex. The surfaces can be inflated and/or flattened for improved visualization. The surfaces can also be used to constrain the solutions to inverse optical, EEG and MEG problems. In addition, a cortical surface-based atlas has been defined based on average folding patterns mapped to a sphere. Surfaces from individuals can be aligned with this atlas with a high-dimensional nonlinear registration algorithm. The registration is based on aligning the cortical folding patterns and so directly aligns the anatomy instead of image intensities. The spherical atlas naturally forms a coordinate system in which point-to-point correspondence between subjects can be achieved. This coordinate system can then be used to create group maps (similar to how MNI space is used for volumetric measurements).
+FreeSurfer is a set of software tools for the study of cortical and subcortical anatomy. In the cortical surface stream, the tools construct models of the boundary between white matter and cortical gray matter as well as the pial surface. 
+Once these surfaces are known, an array of anatomical measures becomes possible, including: cortical thickness, surface area, curvature, and surface normal at each point on the cortex. 
+The surfaces can be inflated and/or flattened for improved visualization. The surfaces can also be used to constrain the solutions to inverse optical, EEG and MEG problems. In addition, a cortical surface-based atlas has been defined based on average folding patterns mapped to a sphere. Surfaces from individuals can be aligned with this atlas with a high-dimensional nonlinear registration algorithm.
+ The registration is based on aligning the cortical folding patterns and so directly aligns the anatomy instead of image intensities. The spherical atlas naturally forms a coordinate system in which point-to-point correspondence between subjects can be achieved. This coordinate system can then be used to create group maps (similar to how MNI space is used for volumetric measurements).
 
-FreeSurfer has several interactive graphical tools for data visualization, analysis, and management. The primary GUI is called Freeview. This tool has many functionalities, which include: visualizing FreeSurfer outputs (surfaces, volumes, ROIs, time courses, overlays and more), editing FreeSurfer-generated volumes, segmentations and parcellations, as well as the ability to manually label MRI data. FreeSurfer also has a GUI to assist in the management and analysis of groups of data, called QDEC.
+FreeSurfer has several interactive graphical tools for data visualization, analysis, and management. The primary GUI is called Freeview. This tool has many functionalities, which include: visualizing FreeSurfer outputs (surfaces, volumes, ROIs, time courses, overlays and more), editing FreeSurfer-generated volumes, segmentations and parcellations, as well as the ability to manually label MRI data.
+ FreeSurfer also has a GUI to assist in the management and analysis of groups of data, called QDEC.
 
 
