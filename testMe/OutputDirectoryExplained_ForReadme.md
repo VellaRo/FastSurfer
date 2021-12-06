@@ -33,17 +33,19 @@
 __Important ones__:
 * __mri__ here are Stored the output files
 
-    	- aparc.DKTatlas+aseg.deep.mgz:
+- aparc.DKTatlas+aseg.deep.mgz:
 				output of segmentation of FasSurferCNN (input for recon_surf pipeline) 
     		
     	- aparc+aseg.orig.mgz:
-    			input segmenation for recon_surf is converted to .mgz (in default pipeline it is already a .mgz so it is just a copy of segmentation of FasSurferCNN) 
+    		input segmenation for recon_surf is converted to .mgz 
+    		(in default pipeline it is already a .mgz so it is just a copy of segmentation of FasSurferCNN) 
     		
     	- aparc.DKTatlas+aseg.deep.withCC.mgz:
-    			A few steps into recon-surf we use FreeSurfer to compute the Corpus Callosum label. This label then gets painted into the orignial FastSurferCNN segmentation.
+    		A few steps into recon-surf we use FreeSurfer to compute the Corpus Callosum label. 
+    		This label then gets painted into the orignial FastSurferCNN segmentation.
     		
     	-aparc.mapped+aseg.mgz:
-    			This file is an updated segmentation (including CC), where the cortical regions (aparc) are mapped from the surfaces back into the volume. 
+    		This file is an updated segmentation (including CC), where the cortical regions (aparc) are mapped from the surfaces back into the volume. 
     			Generally a "mapped" in the file name indicates that cortical parcellations are not computed on the cortical surfaces but are mapped from the CNN segmentation onto the surface earlier, e.g. for ROI thickness estimates.
     			The aparc.mapped+aseg.mgz is a volume where both subcortical and cortical labels are corrected by the surfaces, so that no cortical labels should be outside the space between white and pial surface. 
     			From this segmentation volume we create a wmparc.mapped.mgz including the additional white matter segmentations. 
