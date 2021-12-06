@@ -31,9 +31,9 @@
 
 #### Folder explaination:
 __Important ones__:
-##### mri 
+* __mri__ 
 
-here are Stored the output files:
+Here are Stored the output files:
 
 - aparc.DKTatlas+aseg.deep.mgz:
 	output of segmentation of FasSurferCNN (input for recon_surf pipeline) 
@@ -52,7 +52,7 @@ here are Stored the output files:
     
 * __scripts__ 
 
-here are stored the .log files of the run pipeline.
+	Here are stored the .log files of the run pipeline.
     
 - deep-seg.log (Log file for fastsurfercnn eval.py)
 - recon-all (whole pipeline: FastSurferCNN + recon-surf,)
@@ -63,9 +63,9 @@ here are stored the .log files of the run pipeline.
 
 Here are computed and provided some Statistics:
     	
-    	aparc.DKTatlas+aseg.deep.volume.stats (stats for aparc.DKTatlas+aseg.deep.withCC.mgz)
-    	wmparc.mapped.stats (white matter segmentation stats)
-    	aseg.stats (Final aseg stats)
+- aparc.DKTatlas+aseg.deep.volume.stats (stats for aparc.DKTatlas+aseg.deep.withCC.mgz)
+- wmparc.mapped.stats (white matter segmentation stats)
+- aseg.stats (Final aseg stats)
     	...
 #### Other
     __surf__ ?
