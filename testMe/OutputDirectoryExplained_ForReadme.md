@@ -59,7 +59,7 @@ Here are stored the .log files of the run pipeline:
 - recon-all (whole pipeline: FastSurferCNN + recon-surf,)
 - recon-surf Log file for recon-surf.sh)
 
-...
+	...
     	
 #### stats: 
 
@@ -69,7 +69,7 @@ Here are computed and provided some Statistics:
 - wmparc.mapped.stats (white matter segmentation stats)
 - aseg.stats (Final aseg stats)
 
-...
+	...
     	
 __(Other)__:
 - surf 
