@@ -49,7 +49,8 @@ Here are Stored the output files:
     		
 - aparc+aseg.mgz (OPTIONAL --fsaparc):
     			If recon-surf was run with the --fsaparc flag, processing is more involved. Here we use FreeSurfers non-linear spherical atlas to actually segment surfaces as done in FreeSurfers recon-all, instead of only mapping FastSurferCNN's volume segmentation onto the cortex. This adds considerable processing time mainly and provides the aparc+aseg.mgz and wmparc.mgz files. The spherical registration step, however, is necessary if users want to perform statistics on the surfaces (fsaverage as a group template). It can be switched on by itself without spherical segmentation, via the --surfreg flag.
-    
+
+		...
 #### scripts: 
 
 Here are stored the .log files of the run pipeline:
@@ -57,6 +58,7 @@ Here are stored the .log files of the run pipeline:
 - deep-seg.log (Log file for fastsurfercnn eval.py)
 - recon-all (whole pipeline: FastSurferCNN + recon-surf,)
 - recon-surf Log file for recon-surf.sh)
+
     	...
     	
 #### stats: 
@@ -66,6 +68,7 @@ Here are computed and provided some Statistics:
 - aparc.DKTatlas+aseg.deep.volume.stats (stats for aparc.DKTatlas+aseg.deep.withCC.mgz)
 - wmparc.mapped.stats (white matter segmentation stats)
 - aseg.stats (Final aseg stats)
+
     	...
     	
 __(Other)__:
