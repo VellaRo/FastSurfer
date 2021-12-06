@@ -35,7 +35,7 @@ __Important ones__:
 
 here are Stored the output files:
 
-	aparc.DKTatlas+aseg.deep.mgz:
+- aparc.DKTatlas+aseg.deep.mgz:
 				output of segmentation of FasSurferCNN (input for recon_surf pipeline) 
     		
     aparc+aseg.orig.mgz:
