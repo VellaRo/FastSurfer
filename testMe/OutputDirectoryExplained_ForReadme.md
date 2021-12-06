@@ -31,12 +31,12 @@
 
 #### Folder explaination:
 __Important ones__:
-* __mri__ here are Stored the output files
+##### mri__ here are Stored the output files
 
-		aparc.DKTatlas+aseg.deep.mgz:
+	- aparc.DKTatlas+aseg.deep.mgz:
 				output of segmentation of FasSurferCNN (input for recon_surf pipeline) 
     		
-    	aparc+aseg.orig.mgz:
+     - aparc+aseg.orig.mgz:
     		input segmenation for recon_surf is converted to .mgz 
     		(in default pipeline it is already a .mgz so it is just a copy of segmentation of FasSurferCNN) 
     		
