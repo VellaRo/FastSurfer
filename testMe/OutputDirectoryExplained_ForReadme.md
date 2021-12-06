@@ -29,19 +29,26 @@
     └── trash
 ```
 
-Folder explaination:
- Important ones:
-    TEts
+#### Folder explaination:
+__Important ones__:
 * __mri__: here are Stored the output files:
 
     		- aparc.DKTatlas+aseg.deep.mgz:
 				output of segmentation of FasSurferCNN (input for recon_surf pipeline) 
+    		
     		- aparc+aseg.orig.mgz:
     			input segmenation for recon_surf is converted to .mgz (in default pipeline it is already a .mgz so it is just a copy of segmentation of FasSurferCNN) 
+    		
     		- aparc.DKTatlas+aseg.deep.withCC.mgz:
     			A few steps into recon-surf we use FreeSurfer to compute the Corpus Callosum label. This label then gets painted into the orignial FastSurferCNN segmentation.
+    		
     		-aparc.mapped+aseg.mgz:
-    			This file is an updated segmentation (including CC), where the cortical regions (aparc) are mapped from the surfaces back into the volume. Generally a "mapped" in the file name indicates that cortical parcellations are not computed on the cortical surfaces but are mapped from the CNN segmentation onto the surface earlier, e.g. for ROI thickness estimates. The aparc.mapped+aseg.mgz is a volume where both subcortical and cortical labels are corrected by the surfaces, so that no cortical labels should be outside the space between white and pial surface. From this segmentation volume we create a wmparc.mapped.mgz including the additional white matter segmentations. Similarly the aseg.mgz (without cortical parcellations) is updated with the surfaces.
+    			This file is an updated segmentation (including CC), where the cortical regions (aparc) are mapped from the surfaces back into the volume. 
+    			Generally a "mapped" in the file name indicates that cortical parcellations are not computed on the cortical surfaces but are mapped from the CNN segmentation onto the surface earlier, e.g. for ROI thickness estimates.
+    			The aparc.mapped+aseg.mgz is a volume where both subcortical and cortical labels are corrected by the surfaces, so that no cortical labels should be outside the space between white and pial surface. 
+    			From this segmentation volume we create a wmparc.mapped.mgz including the additional white matter segmentations. 
+    			Similarly the aseg.mgz (without cortical parcellations) is updated with the surfaces.
+    		
     		-aparc+aseg.mgz (OPTIONAL --fsaparc):
     			If recon-surf was run with the --fsaparc flag, processing is more involved. Here we use FreeSurfers non-linear spherical atlas to actually segment surfaces as done in FreeSurfers recon-all, instead of only mapping FastSurferCNN's volume segmentation onto the cortex. This adds considerable processing time mainly and provides the aparc+aseg.mgz and wmparc.mgz files.
     			The spherical registration step, however, is necessary if users want to perform statistics on the surfaces (fsaverage as a group template). It can be switched on by itself without spherical segmentation, via the --surfreg flag.
@@ -59,7 +66,7 @@ Folder explaination:
     	- wmparc.mapped.stats (white matter segmentation stats)
     	- aseg.stats (Final aseg stats)
     	...
- Other:
+#### Other:
     __surf__ ?
     __tmp__ ?
     __touch__ ?textfiles with commands which are runed at runtime ? 
